@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="862cf6a5-8301-4e6c-9abc-eb665021e270" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/location_processing/api/v1/resources/LocationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/location_processing/api/v1/resources/LocationResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/models/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,19 +47,6 @@
       <recent name="$PROJECT_DIR$/api/src/main/resources/META-INF" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,6 +58,7 @@
       <workItem from="1606931873982" duration="1536000" />
       <workItem from="1606934123031" duration="891000" />
       <workItem from="1606936027766" duration="2237000" />
+      <workItem from="1606939185741" duration="411000" />
     </task>
     <servers />
   </component>
