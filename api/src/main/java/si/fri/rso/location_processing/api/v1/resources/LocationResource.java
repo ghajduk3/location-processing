@@ -21,11 +21,11 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 public class LocationResource {
 
     @GET
-    public Response getAllLocations(){
+    public Response getMejnikInfo(){
 
         return Response
                 .status(200)
-                .entity("Eventi")
+                .entity("{ }")
                 .build();
     }
 }
