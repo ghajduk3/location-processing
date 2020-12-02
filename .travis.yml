@@ -1,5 +1,5 @@
 sudo: required
-
+os: windows
 services:
   - docker
 
