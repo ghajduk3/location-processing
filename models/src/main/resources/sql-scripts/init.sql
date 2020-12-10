@@ -1,0 +1,1 @@
+insert into locations(address, country, city, street, lat, lon) values ('Ulica Rista Lekica','Montenegro','Bar','Rista Lekica',23.324,45.123)
