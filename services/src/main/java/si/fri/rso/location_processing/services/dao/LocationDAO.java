@@ -37,6 +37,21 @@ public class LocationDAO extends GenericDAO<LocationEntity,Integer>{
         return location;
     }
 
+    @Override
+    public LocationEntity createNew(LocationEntity entity) {
+        try{
+            beginTx();
+            em.persist(entity);
+            em.flush();
+            commitTx();
+        }catch (Exception e){
+            rollbackTx();
+        }
+        if(entity == null){
+            System.out.println("Null entity");
+        }
+        return entity;
+    }
 
 
 }

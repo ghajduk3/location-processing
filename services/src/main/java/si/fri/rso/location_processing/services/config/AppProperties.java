@@ -11,15 +11,15 @@ public class AppProperties {
 
 
 
-    @ConfigValue(value = "primary-key")
-    private String primaryKey;
+    @ConfigValue(value = "geocode-key")
+    private String geocodeKey;
 
-    public String getPrimaryKey() {
-        return primaryKey;
+    public String getGeocodeKey() {
+        return geocodeKey;
     }
 
-    public void setPrimaryKey(String primaryKey) {
-        this.primaryKey = primaryKey;
+    public void setGeocodeKey(String geocodeKey) {
+        this.geocodeKey = geocodeKey;
     }
 
 }

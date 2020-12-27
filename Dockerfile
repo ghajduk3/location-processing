@@ -1,4 +1,4 @@
-FROM openjdk:9-jre-slim
+FROM adoptopenjdk:14-jre-hotspot
 
 RUN mkdir /app
 

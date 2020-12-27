@@ -47,7 +47,7 @@ public abstract class GenericDAO<E,PK> {
     }
 
     //TODO Create custom exceptions
-    public E createNew(E instance) throws EntityExistsException,Exception {
+    public E createNew(E instance) throws EntityExistsException {
         try{
             beginTx();
             em.persist(instance);
@@ -56,7 +56,7 @@ public abstract class GenericDAO<E,PK> {
             rollbackTx();
         }
         if(instance == null){
-            throw new Exception("Null entity");
+            System.out.println("Null entity");
         }
         return instance;
     }

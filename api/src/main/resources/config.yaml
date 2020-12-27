@@ -16,4 +16,4 @@ kumuluzee:
     - name: "event-catalog-jpa"
       continue-on-error: false
 app-properties:
-  primary-key: "xgmq28JmflPPIIVrfxsn3hoFroYjKgVuZq4TbjKWZUk"
+  geocode-key: "AIzaSyAvSGseJIVEoPaF22P8ebFINbKn70IVBxo"

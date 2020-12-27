@@ -25,6 +25,14 @@ public class LocationDto {
         this.lat = lat;
         this.lon = lon;
     }
+    public LocationDto(String address, String country, String city, String street, Float lat, Float lon) {
+        this.address = address;
+        this.country = country;
+        this.city = city;
+        this.street = street;
+        this.lat = lat;
+        this.lon = lon;
+    }
 
     public Integer getId() {
         return id;

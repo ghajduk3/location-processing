@@ -17,6 +17,7 @@ import java.util.List;
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
 import si.fri.location_processing.models.dtos.LocationDto;
+import si.fri.rso.location_processing.services.LocationProcessingServiceBean;
 import si.fri.rso.location_processing.services.db.LocationServiceBean;
 
 @Path("/location")
@@ -25,10 +26,12 @@ public class LocationResource {
 
     @Inject
     private LocationServiceBean serviceDBBean;
+    @Inject
+    private LocationProcessingServiceBean processBean;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getLocations(){
+    public Response getLocations() throws UnsupportedEncodingException {
         List<LocationDto> locations = serviceDBBean.findAll();
         return Response.status(200).entity(locations).build();
     }
@@ -53,4 +56,13 @@ public class LocationResource {
             return Response.status(Response.Status.NOT_FOUND).build();
         }
     }
+
+    @Path("/process")
+    @Produces(MediaType.APPLICATION_JSON)
+    @GET
+    public Response processLocation(@QueryParam("address") String address){
+        Integer locationId = processBean.processLocation(address);
+        return Response.status(200).entity(locationId).build();
+    }
+
 }

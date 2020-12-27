@@ -9,6 +9,7 @@ import si.fri.rso.location_processing.services.dao.LocationDAO;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 @RequestScoped
@@ -26,9 +27,9 @@ public class LocationServiceBean {
     @Inject
     private LocationProcessingServiceBean processBean;
 
-    public List<LocationDto> findAll(){
+    public List<LocationDto> findAll() throws UnsupportedEncodingException {
         List<LocationEntity> entities = locationDAO.findAll();
-        processBean.processLocation();
+//        processBean.processLocation();
         return locationConverter.transformToDTO(entities);
 
     }
@@ -40,6 +41,10 @@ public class LocationServiceBean {
     public Boolean deleteById(Integer id){
         Boolean resp = locationDAO.deleteById(id);
         return resp;
+    }
+
+    public LocationDto createLocation(LocationDto locationDto){
+       return locationConverter.transformToDTO(locationDAO.createNew(locationConverter.transformToEntity(locationDto)));
     }
 
 
