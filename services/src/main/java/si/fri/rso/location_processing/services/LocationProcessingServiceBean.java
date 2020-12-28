@@ -53,6 +53,7 @@ public class LocationProcessingServiceBean {
     public Integer processLocation(String address) {
         GeocodeResult result;
         try {
+            System.out.println(config.getGeocodeKey());
              result = httpClient
                     .target(baseUrl)
                     .queryParam("address", address)

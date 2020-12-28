@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="862cf6a5-8301-4e6c-9abc-eb665021e270" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/73375b7f-0c04-412a-84e5-aca5ae1c791b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/73375b7f-0c04-412a-84e5-aca5ae1c791b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/73375b7f-0c04-412a-84e5-aca5ae1c791b/storage_v2/_src_/database/event-catalog.5nsT7g/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/73375b7f-0c04-412a-84e5-aca5ae1c791b/storage_v2/_src_/database/event-catalog.5nsT7g/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/location_processing/api/v1/resources/LocationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/location_processing/api/v1/resources/LocationResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/src/main/java/si/fri/location_processing/models/dtos/LocationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/main/java/si/fri/location_processing/models/dtos/LocationDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/LocationProcessingServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/LocationProcessingServiceBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/clients/AmazonMapsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/clients/GoogleMapsClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/config/AppProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/config/AppProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/dao/GenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/dao/GenericDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/dao/LocationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/dao/LocationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/db/LocationServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/db/LocationServiceBean.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,13 +58,15 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -118,7 +108,8 @@
       <workItem from="1608979548674" duration="81000" />
       <workItem from="1608980338643" duration="101000" />
       <workItem from="1608989502583" duration="99000" />
-      <workItem from="1609054907249" duration="321000" />
+      <workItem from="1609054907249" duration="8799000" />
+      <workItem from="1609092969810" duration="4120000" />
     </task>
     <servers />
   </component>

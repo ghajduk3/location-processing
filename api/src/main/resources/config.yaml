@@ -3,6 +3,11 @@ kumuluzee:
   env:
     name: dev
   version: 1.0.0
+  config:
+    start-retry-delay-ms: 500
+    max-retry-delay-ms: 900000
+    etcd:
+      hosts: http://localhost:2379
   server:
     base-url: http://localhost:8083
     http:
@@ -15,5 +20,5 @@ kumuluzee:
   persistence-units:
     - name: "event-catalog-jpa"
       continue-on-error: false
-app-properties:
+geo-properties:
   geocode-key: "AIzaSyAvSGseJIVEoPaF22P8ebFINbKn70IVBxo"
