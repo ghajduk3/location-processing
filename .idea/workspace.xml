@@ -7,9 +7,8 @@
     <list default="true" id="862cf6a5-8301-4e6c-9abc-eb665021e270" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kube.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/LocationProcessingServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/LocationProcessingServiceBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/config/AppProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/config/AppProperties.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,15 +57,13 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -110,6 +107,9 @@
       <workItem from="1608989502583" duration="99000" />
       <workItem from="1609054907249" duration="8799000" />
       <workItem from="1609092969810" duration="4120000" />
+      <workItem from="1609137994614" duration="45000" />
+      <workItem from="1609188526473" duration="259000" />
+      <workItem from="1609270558110" duration="674000" />
     </task>
     <servers />
   </component>

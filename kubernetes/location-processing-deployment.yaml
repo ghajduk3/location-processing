@@ -1,0 +1,59 @@
+apiVersion: apps/v1
+kind: Deployment
+# Name of the deployment
+metadata:
+  name: location-processing-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: location-processing
+  template:
+    metadata:
+      labels:
+        app: location-processing
+    spec:
+      volumes:
+        - name: google-cloud-key
+          secret:
+            secretName: pubsub-key
+      containers:
+        - image: ghajduk3/location-processing:latest
+          #          Pod name
+          name: location-processing
+          #          Here we can override environment variables
+          #          env:
+          #            - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
+          #              value: jdbc:postgresql://lallah.db.elephantsql.com:5432/kryfltbl
+          #            - name: KUMULUZEE_DATASOURCES0_USERNAME
+          #              value: kryfltbl
+          #            - name: KUMULUZEE_DATASOURCES0_PASSWORD
+          #              valueFrom:
+          #                secretKeyRef:
+          #                  name: pg-pass
+          #                  key: KUMULUZEE_DATASOURCES0_PASSWORD
+          volumeMounts:
+            - name: google-cloud-key
+              mountPath: /var/secrets/google
+          env:
+            - name: GOOGLE_APPLICATION_CREDENTIALS
+              value: /var/secrets/google/key.json
+          ports:
+            - containerPort: 8082
+              name: server
+              protocol: TCP
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: location-processing
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: server
+  selector:
+    app: location-processing
