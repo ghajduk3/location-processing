@@ -38,8 +38,10 @@ spec:
           env:
             - name: GOOGLE_APPLICATION_CREDENTIALS
               value: /var/secrets/google/key.json
+            - name: KUMULUZEE_CONFIG_ETCD_HOSTS
+              value: http://etcd:2379
           ports:
-            - containerPort: 8082
+            - containerPort: 8083
               name: server
               protocol: TCP
 
@@ -50,7 +52,7 @@ kind: Service
 metadata:
   name: location-processing
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - port: 8080
       protocol: TCP

@@ -7,8 +7,8 @@
     <list default="true" id="862cf6a5-8301-4e6c-9abc-eb665021e270" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kube.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubernetes/location-processing-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/location-processing-deployment.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/src/main/java/si/fri/location_processing/models/entities/LocationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/main/java/si/fri/location_processing/models/entities/LocationEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,17 +57,30 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="/home/gojko/Documents/faks/rso-vaje/location-processing" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle./home/gojko/Documents/faks/rso-vaje/location-processing" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -109,7 +122,13 @@
       <workItem from="1609092969810" duration="4120000" />
       <workItem from="1609137994614" duration="45000" />
       <workItem from="1609188526473" duration="259000" />
-      <workItem from="1609270558110" duration="674000" />
+      <workItem from="1609270558110" duration="2721000" />
+      <workItem from="1609277370789" duration="717000" />
+      <workItem from="1609278941580" duration="28000" />
+      <workItem from="1609346442642" duration="54000" />
+      <workItem from="1609603694235" duration="1114000" />
+      <workItem from="1609676086427" duration="229000" />
+      <workItem from="1609864130318" duration="3379000" />
     </task>
     <servers />
   </component>

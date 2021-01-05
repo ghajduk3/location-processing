@@ -3,11 +3,11 @@ package si.fri.location_processing.models.entities;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
+@Entity(name="locations")
 @Table(name="locations")
 @NamedQueries(value=
         {
-                @NamedQuery(name="Location.findAll",query = "SELECT ev FROM LocationEntity ev")
+                @NamedQuery(name="Location.findAll",query = "SELECT ev FROM locations ev")
         })
 public class LocationEntity implements Serializable {
 
