@@ -13,6 +13,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
@@ -26,6 +27,8 @@ import javax.ws.rs.core.MediaType;
 
 @RequestScoped
 public class LocationProcessingServiceBean {
+    private Logger log = Logger.getLogger(LocationProcessingServiceBean.class.getName());
+
     @Inject
     private LocationDAO locationDAO;
 
@@ -50,29 +53,34 @@ public class LocationProcessingServiceBean {
         baseUrl = "https://maps.googleapis.com/maps/api/geocode/json?";
     }
 
+
+
     public Integer processLocation(String address) {
+        log.info("Geocoding specific address");
         GeocodeResult result;
         try {
             System.out.println(config.getGeocodeKey());
-             result = httpClient
+            result = httpClient
                     .target(baseUrl)
                     .queryParam("address", address)
                     .queryParam("key", config.getGeocodeKey())
                     .request(MediaType.APPLICATION_JSON)
                     .get(GeocodeResult.class);
         }catch(WebApplicationException | ProcessingException e){
-            System.out.println(e.getMessage());
+            log.severe(e.getMessage());
             throw new InternalServerErrorException(e);
         }
-    return preprocess(result.getResults().get(0),address);
+        return preprocess(result.getResults().get(0),address);
     }
 
     private Integer preprocess(GeocodeObject geoData,String address){
         GeocodeLocation geoLocation = geoData.getGeometry().getGeocodeLocation();
         String[] addressParts = address.split(",");
+//        LocationDto location = new LocationDto(address,addressParts[2],addressParts[1],addressParts[0],Float.parseFloat(geoLocation.getLatitude()),Float.parseFloat(geoLocation.getLongitude()));
         LocationDto location = serviceDBbean.createLocation(new LocationDto(address,addressParts[2],addressParts[1],addressParts[0],Float.parseFloat(geoLocation.getLatitude()),Float.parseFloat(geoLocation.getLongitude())));
         return location.getId();
 
     }
+
 
 }

@@ -7,9 +7,11 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.ws.rs.ApplicationPath;
+import java.util.logging.Logger;
 
 @ApplicationScoped
 public class GoogleMapsClient {
+    private Logger log = Logger.getLogger(GoogleMapsClient.class.getName());
 
     @Inject
     private AppProperties config;
@@ -18,7 +20,7 @@ public class GoogleMapsClient {
     @PostConstruct
     public void init(){
         GeoApiContext context = new GeoApiContext.Builder().apiKey("AIzaSyAvSGseJIVEoPaF22P8ebFINbKn70IVBxo").build();
-
+        log.info("Initializing google maps client.");
 
     }
 

@@ -3,10 +3,13 @@ package si.fri.rso.location_processing.services.dao;
 
 
 import jdk.jshell.spi.ExecutionControl;
+import si.fri.rso.location_processing.services.exceptions.*;
 
 
 import javax.inject.Inject;
 import javax.persistence.*;
+import javax.persistence.EntityNotFoundException;
+import javax.ws.rs.InternalServerErrorException;
 import java.security.InvalidParameterException;
 import java.util.List;
 
@@ -25,11 +28,11 @@ public abstract class GenericDAO<E,PK> {
         this.entityClass = entityClass;
     }
 
-    public List<E> findAll() throws Exception {
-        throw new Exception("Not implemented");
+    public List<E> findAll() throws UnsupportedOperationException{
+        throw new UnsupportedOperationException();
     }
 
-    public E findById(PK id) throws InvalidParameterException, EntityNotFoundException {
+    public E findById(PK id) throws EntityNotFoundException, InternalServerException {
         E entity;
 
         try {
@@ -38,34 +41,33 @@ public abstract class GenericDAO<E,PK> {
             throw new EntityNotFoundException("Entity was not found");
         } catch (Exception e) {
             e.printStackTrace();
-            throw new InternalError();
+            throw new InternalServerException("Something happened with the server" + e.getMessage());
         }
-        if (entity == null) {
-            throw new EntityNotFoundException();
-        }
+
         return entity;
     }
 
-    //TODO Create custom exceptions
-    public E createNew(E instance) throws EntityExistsException {
+    public E createNew(E instance) throws EntityExistsException,InvalidEntityException,Exception {
         try{
             beginTx();
             em.persist(instance);
+            em.flush();
             commitTx();
         }catch (Exception e){
             rollbackTx();
+            throw new InternalServerErrorException();
         }
         if(instance == null){
-            System.out.println("Null entity");
+            throw new InvalidEntityException();
         }
         return instance;
     }
 
-    public E update(E instance, PK id) throws Exception {
-        throw new Exception("Not implemented");
+    public E update(E instance, PK id) throws UnsupportedOperationException, InvalidEntityException, InternalServerException {
+        throw new UnsupportedOperationException();
     }
 
-    public Boolean deleteById(PK id)  {
+    public Boolean deleteById(PK id) throws UnsupportedOperationException, InvalidParameterException, InternalServerException {
         E entity = findById(id);
         if(entity != null){
             try{
@@ -74,13 +76,12 @@ public abstract class GenericDAO<E,PK> {
                 commitTx();
             }catch (Exception e){
                 rollbackTx();
+                throw new InternalServerException();
             }
         }else{
             return false;
         }
-
         return true;
-
     }
 
 

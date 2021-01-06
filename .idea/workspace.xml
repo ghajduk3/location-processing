@@ -6,9 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="862cf6a5-8301-4e6c-9abc-eb665021e270" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/location_processing/api/v1/LocationApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/location_processing/api/v1/LocationApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/location_processing/api/v1/resources/LocationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/si/fri/rso/location_processing/api/v1/resources/LocationResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes/location-processing-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/location-processing-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/src/main/java/si/fri/location_processing/models/entities/LocationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/main/java/si/fri/location_processing/models/entities/LocationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/src/main/resources/config_production.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config_production.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/LocationProcessingServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/LocationProcessingServiceBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/clients/GoogleMapsClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/clients/GoogleMapsClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/dao/GenericDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/dao/GenericDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/dao/LocationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/dao/LocationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/db/LocationServiceBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services/db/LocationServiceBean.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +44,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../event-catalog" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -45,13 +52,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/services/src/main/java/si/fri/rso/location_processing/services" />
       <recent name="$PROJECT_DIR$/models/src/main/resources" />
       <recent name="$PROJECT_DIR$/services/src/main/resources" />
       <recent name="$PROJECT_DIR$/api/src/main/resources" />
       <recent name="$PROJECT_DIR$/api/src/main/resources/WEB-INF" />
-      <recent name="$PROJECT_DIR$/api/src/main/resources/META-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="si.fri.rso.location_processing.api.v1.interceptors" />
       <recent name="si.fri.location_processing.models.transformers" />
       <recent name="si.fri.rso.location_processing.services.producers" />
     </key>
@@ -129,6 +137,8 @@
       <workItem from="1609603694235" duration="1114000" />
       <workItem from="1609676086427" duration="229000" />
       <workItem from="1609864130318" duration="3379000" />
+      <workItem from="1609877103442" duration="14462000" />
+      <workItem from="1609952066629" duration="6891000" />
     </task>
     <servers />
   </component>

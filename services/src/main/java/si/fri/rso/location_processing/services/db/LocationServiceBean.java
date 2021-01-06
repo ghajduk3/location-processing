@@ -6,9 +6,12 @@ import si.fri.location_processing.models.transformers.LocationConverter;
 import si.fri.rso.location_processing.services.LocationProcessingServiceBean;
 import si.fri.rso.location_processing.services.config.AppProperties;
 import si.fri.rso.location_processing.services.dao.LocationDAO;
+import si.fri.rso.location_processing.services.exceptions.InternalServerException;
+import si.fri.rso.location_processing.services.exceptions.InvalidParameterException;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+import javax.persistence.EntityNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
@@ -29,16 +32,15 @@ public class LocationServiceBean {
 
     public List<LocationDto> findAll() throws UnsupportedEncodingException {
         List<LocationEntity> entities = locationDAO.findAll();
-//        processBean.processLocation();
         return locationConverter.transformToDTO(entities);
 
     }
 
-    public LocationDto findById(Integer id){
+    public LocationDto findById(Integer id) throws EntityNotFoundException,InternalServerException {
         return locationConverter.transformToDTO(locationDAO.findById(id));
     }
 
-    public Boolean deleteById(Integer id){
+    public Boolean deleteById(Integer id) throws InternalServerException,EntityNotFoundException, InvalidParameterException {
         Boolean resp = locationDAO.deleteById(id);
         return resp;
     }

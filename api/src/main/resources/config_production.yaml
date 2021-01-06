@@ -12,6 +12,8 @@ kumuluzee:
     base-url: http://localhost:8083
     http:
       port: 8083
+  openapi:
+    enabled: true
   datasources:
 #    - jndi-name: jdbc/EventCatalogDS
 #      connection-url: jdbc:postgresql://localhost:5432/event-catalog

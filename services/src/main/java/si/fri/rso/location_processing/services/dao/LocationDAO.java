@@ -2,6 +2,7 @@ package si.fri.rso.location_processing.services.dao;
 
 
 import si.fri.location_processing.models.entities.LocationEntity;
+import si.fri.rso.location_processing.services.exceptions.InternalServerException;
 
 import javax.enterprise.context.RequestScoped;
 import java.util.List;
@@ -19,7 +20,7 @@ public class LocationDAO extends GenericDAO<LocationEntity,Integer>{
     }
 
     @Override
-    public LocationEntity update(LocationEntity location, Integer id){
+    public LocationEntity update(LocationEntity location, Integer id) throws InternalServerException {
         LocationEntity entity = findById(id);
 
         if(entity == null){
