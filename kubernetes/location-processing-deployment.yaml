@@ -40,6 +40,11 @@ spec:
               value: /var/secrets/google/key.json
             - name: KUMULUZEE_CONFIG_ETCD_HOSTS
               value: http://etcd:2379
+            - name: KUMULUZEE_DISCOVERY_ETCD_HOSTS
+              value: http://etcd:2379
+            - name: GEOPROPERTIES_GEOCODEKEY
+              value: AIzaSyAvSGseJIVEoPaF22P8ebFINbKn70IVBxo
+          imagePullPolicy: Always
           ports:
             - containerPort: 8083
               name: server
