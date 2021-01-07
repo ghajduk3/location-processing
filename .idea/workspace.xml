@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="862cf6a5-8301-4e6c-9abc-eb665021e270" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubernetes/location-processing-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/kubernetes/location-processing-deployment.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +129,7 @@
       <workItem from="1609864130318" duration="3379000" />
       <workItem from="1609877103442" duration="14462000" />
       <workItem from="1609952066629" duration="8854000" />
-      <workItem from="1610031094397" duration="2590000" />
+      <workItem from="1610031094397" duration="9052000" />
     </task>
     <servers />
   </component>
