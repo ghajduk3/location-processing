@@ -76,7 +76,6 @@ public class LocationProcessingServiceBean {
     private Integer preprocess(GeocodeObject geoData,String address){
         GeocodeLocation geoLocation = geoData.getGeometry().getGeocodeLocation();
         String[] addressParts = address.split(",");
-//        LocationDto location = new LocationDto(address,addressParts[2],addressParts[1],addressParts[0],Float.parseFloat(geoLocation.getLatitude()),Float.parseFloat(geoLocation.getLongitude()));
         LocationDto location = serviceDBbean.createLocation(new LocationDto(address,addressParts[2],addressParts[1],addressParts[0],Float.parseFloat(geoLocation.getLatitude()),Float.parseFloat(geoLocation.getLongitude())));
         return location.getId();
 

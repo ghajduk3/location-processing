@@ -19,7 +19,7 @@ public class GoogleMapsClient {
 
     @PostConstruct
     public void init(){
-        GeoApiContext context = new GeoApiContext.Builder().apiKey("AIzaSyAvSGseJIVEoPaF22P8ebFINbKn70IVBxo").build();
+        GeoApiContext context = new GeoApiContext.Builder().apiKey(config.getGeocodeKey()).build();
         log.info("Initializing google maps client.");
 
     }

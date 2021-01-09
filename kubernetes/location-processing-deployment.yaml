@@ -19,19 +19,7 @@ spec:
             secretName: pubsub-key
       containers:
         - image: ghajduk3/location-processing:latest
-          #          Pod name
           name: location-processing
-          #          Here we can override environment variables
-          #          env:
-          #            - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
-          #              value: jdbc:postgresql://lallah.db.elephantsql.com:5432/kryfltbl
-          #            - name: KUMULUZEE_DATASOURCES0_USERNAME
-          #              value: kryfltbl
-          #            - name: KUMULUZEE_DATASOURCES0_PASSWORD
-          #              valueFrom:
-          #                secretKeyRef:
-          #                  name: pg-pass
-          #                  key: KUMULUZEE_DATASOURCES0_PASSWORD
           volumeMounts:
             - name: google-cloud-key
               mountPath: /var/secrets/google
@@ -43,7 +31,7 @@ spec:
             - name: KUMULUZEE_DISCOVERY_ETCD_HOSTS
               value: http://etcd:2379
             - name: GEOPROPERTIES_GEOCODEKEY
-              value: AIzaSyAvSGseJIVEoPaF22P8ebFINbKn70IVBxo
+              value:
           imagePullPolicy: Always
           ports:
             - containerPort: 8083

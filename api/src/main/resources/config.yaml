@@ -9,9 +9,7 @@ kumuluzee:
     etcd:
       hosts: http://localhost:2379
   server:
-#    base-url: http://localhost:8083
-    base-url: http://52.191.32.66
-#    base-url: http://location-processing:8083
+    base-url: http://localhost:8083
     http:
       port: 8083
   discovery:
@@ -20,14 +18,14 @@ kumuluzee:
   openapi:
     enabled: true
   datasources:
-#    - jndi-name: jdbc/EventCatalogDS
-#      connection-url: jdbc:postgresql://localhost:5432/event-catalog
-#      username: postgres
-#      password: postgres
     - jndi-name: jdbc/EventCatalogDS
-      connection-url: jdbc:postgresql:///rsodatabase?cloudSqlInstance=a1-projekat:us-central1:rsodatabase&socketFactory=com.google.cloud.sql.postgres.SocketFactory
-      username: postgres1
+      connection-url: jdbc:postgresql://localhost:5432/event-catalog
+      username: postgres
       password: postgres
+#    - jndi-name: jdbc/EventCatalogDS
+#      connection-url: jdbc:postgresql:///rsodatabase?cloudSqlInstance=a1-projekat:us-central1:rsodatabase&socketFactory=com.google.cloud.sql.postgres.SocketFactory
+#      username: postgres1
+#      password: postgres
   logs:
     config-file: '<?xml version="1.0" encoding="UTF-8"?>
                         <Configuration name="comments">
@@ -54,5 +52,3 @@ kumuluzee:
       continue-on-error: false
 geo-properties:
   geocode-key:
-
-# GEOPROPERTIES_GEOCODEKEY
